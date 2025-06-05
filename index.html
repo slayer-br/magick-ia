@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magick IA - Semana do zero ao programador contratado</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img src="./assets/imagens/logo.png" alt="logo magickAI" />
+    </header>
+    <main class="container">
+      <h1 class="products">Produtos</h1>
+      <div class="filters">
+        <div class="category-cards">
+          <label for="category">Categoria</label>
+          <select name="category" id="category" class="category">
+            <option value="">Selecione uma categoria</option>
+            <option value="comum">Comum</option>
+            <option value="rara">Rara</option>
+            <option value="epica">Épica</option>
+          </select>
+        </div>
+        <div class="price-cards">
+          <label for="price">Preço</label>
+          <input type="text" name="price" id="price" class="price" placeholder="Ex: 100" />
+        </div>
+        <button class="filter-btn">Aplicar Filtros</button>
+        <ul class="cards">
+          <li class="card" data-category="epica" data-price="3000">
+            <img src="./assets/imagens/carta-arkanon.png" alt="card arkanon" />
+            <div class="information">
+              <h2 class="name">Arkanon</h2>
+              <spam class="category">Categoria: Épica</spam>
+              <span class="price">R$ 3.000,00</span>
+              <button class="buy-btn">Comprar</button>
+            </div>
+          </li>
+
+          <li class="card" data-category="epica" data-price="4000">
+            <img src="./assets/imagens/carta-lymara.png" alt="card lymara" />
+            <div class="information">
+              <h2 class="name">Lymara</h2>
+              <spam class="category">Categoria: Épica</spam>
+              <span class="price">R$ 4.000,00</span>
+              <button class="buy-btn">Comprar</button>
+            </div>
+          </li>
+
+          <li class="card" data-category="comum" data-price="800">
+            <img src="./assets/imagens/carta-kaelthar.png" alt="card kaelthar" />
+            <div class="information">
+              <h2 class="name">Kaelthar</h2>
+              <spam class="category">Categoria: Comum</spam>
+              <span class="price">R$ 800,00</span>
+              <button class="buy-btn">Comprar</button>
+            </div>
+          </li>
+
+          <li class="card" data-category="rara" data-price="1500">
+            <img src="./assets/imagens/carta-maldrik.png" alt="card maldrik" />
+            <div class="information">
+              <h2 class="name">Maldrik</h2>
+              <spam class="category">Categoria: Rara</spam>
+              <span class="price">R$ 1.500,00</span>
+              <button class="buy-btn">Comprar</button>
+            </div>
+          </li>
+
+          <li class="card" data-category="comum" data-price="600">
+            <img src="./assets/imagens/carta-drahven.png" alt="card drahven" />
+            <div class="information">
+              <h2 class="name">Drahven</h2>
+              <spam class="category">Categoria: Comum</spam>
+              <span class="price">R$ 600,00</span>
+              <button class="buy-btn">Comprar</button>
+            </div>
+          </li>
+
+          <li class="card" data-category="comum" data-price="400">
+            <img src="./assets/imagens/carta-nyxsombra.png" alt="card nyxsombra" />
+            <div class="information">
+              <h2 class="name">Nyxsombra</h2>
+              <spam class="category">Categoria: Comum</spam>
+              <span class="price">R$ 400,00</span>
+              <button class="buy-btn">Comprar</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <footer class="footer"></footer>
+  </body>
+</html>
