@@ -224,6 +224,7 @@ body {
   display: block;
 }
 
+/* Responsive */
 @media (max-width:1024px) {
   .container {
     padding: 20px;
