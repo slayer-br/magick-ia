@@ -3,7 +3,7 @@ A aplicação simula uma vitrine de cartas mágicas com personagens fictícios, 
 
 ## 📸 Demonstração
 Uma interface elegante e responsiva que lista cartas mágicas com informações como: nome, categoria, preço e botão de compra via **WhatsApp**.
-
+![Magick-IA](./assets/imagens/magick-ia-desktop.gif)
 
 ## 🛠️ Tecnologias Utilizadas
 - **HTML5** – estrutura da página.
