@@ -93,9 +93,7 @@ body {
 }
 
 .container .categories-card .category {
-  background: var(--color-price-bg)
-    url('data:image/svg+xml;utf8,<svg fill="%236528D3" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>')
-    no-repeat right 1rem center;
+  background: var(--color-price-bg) url(../imagens/seta-para-baixo.png) no-repeat right 1rem center;
   padding-right: 40px; /* Espaço para a seta */
   appearance: none;
   -webkit-appearance: none;
@@ -211,11 +209,10 @@ body {
   transition: 0.3s;
 }
 
-.footer a:hover{
+.footer a:hover {
   color: var(--color-filter);
   text-decoration: underline;
 }
-
 
 .hide {
   display: none;
@@ -225,7 +222,7 @@ body {
 }
 
 /* Responsive */
-@media (max-width:1024px) {
+@media (max-width: 1200px) {
   .container {
     padding: 20px;
   }
@@ -255,7 +252,7 @@ body {
   }
 }
 
-@media (max-width:480px) {
+@media (max-width: 480px) {
   .container .filters .categories-card,
   .container .filters .prices-card,
   .container .filters .filter-btn {

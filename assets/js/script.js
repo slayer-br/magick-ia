@@ -1,30 +1,53 @@
 const filterBtn = document.querySelector(".filter-btn");
 
-filterBtn.addEventListener("click", () => {
-  // Obtém os valores dos filtros, removendo espaços extras
-  const selectedCategory = document.querySelector("#category").value.trim().toLowerCase();
-  const maxPrice = parseFloat(document.querySelector("#price").value.trim());
+filterBtn.addEventListener("click", applyFilters);
 
-  // Verifica se há filtros ativos
-  const hasCategoryFilter = selectedCategory !== "";
-  const hasPriceFilter = !isNaN(maxPrice);
-
-  // Seleciona todas as cartas
+/**
+ * Aplica os filtros de categoria e preço às cartas.
+ */
+function applyFilters() {
+  const selectedCategory = getSelectedCategory();
+  const maxPrice = getMaxPrice();
   const cards = document.querySelectorAll(".card");
 
   cards.forEach((card) => {
-    const categoryCard = card.dataset.category.toLowerCase();
-    const priceCard = parseFloat(card.dataset.price);
-
-    // Verifica se a carta atende aos filtros
-    const categoryMatches = !hasCategoryFilter || selectedCategory === categoryCard;
-    const priceMatches = !hasPriceFilter || priceCard <= maxPrice;
-
-    // Define se a carta deve ser exibida
-    const showCard = categoryMatches && priceMatches;
-
-    // Mostra ou esconde a carta com base na filtragem
-    card.classList.toggle("show", showCard);
-    card.classList.toggle("hide", !showCard);
+    const show = shouldShowCard(card, selectedCategory, maxPrice);
+    toggleCardVisibility(card, show);
   });
-});
+}
+
+/**
+ * Retorna a categoria selecionada no filtro (em minúsculas).
+ */
+function getSelectedCategory() {
+  return document.querySelector("#category").value.trim().toLowerCase();
+}
+
+/**
+ * Retorna o valor do preço máximo selecionado como número.
+ */
+function getMaxPrice() {
+  const price = parseFloat(document.querySelector("#price").value.trim());
+  return isNaN(price) ? null : price;
+}
+
+/**
+ * Verifica se a carta deve ser exibida com base nos filtros.
+ */
+function shouldShowCard(card, selectedCategory, maxPrice) {
+  const categoryCard = card.dataset.category.toLowerCase();
+  const priceCard = parseFloat(card.dataset.price);
+
+  const categoryMatches = !selectedCategory || selectedCategory === categoryCard;
+  const priceMatches = maxPrice === null || priceCard <= maxPrice;
+
+  return categoryMatches && priceMatches;
+}
+
+/**
+ * Alterna a visibilidade da carta com base na filtragem.
+ */
+function toggleCardVisibility(card, show) {
+  card.classList.toggle("show", show);
+  card.classList.toggle("hide", !show);
+}
