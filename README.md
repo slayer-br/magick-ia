@@ -16,6 +16,11 @@ Uma interface elegante e responsiva que lista cartas mágicas com informações 
 - 📱 Responsivo: layout adaptado para dispositivos móveis e desktop.
 - 🛒 Botão de compra via **WhatsApp**: inicia conversa com mensagem personalizada.
 
+## 🔗 Links
+
+- Site ao vivo: <a href="https://slayer-br.github.io/magick-ia/" target="_blank" rel="noopener noreferrer">Magick IA</a>
+- GitHub: <a href="https://github.com/slayer-br/magick-ia" target="_blank" rel="noopener noreferrer">Magick IA</a>
+
 ## 👤 Desenvolvedor
 - GitHub - <a href="https://github.com/slayer-br" target="_blank" rel="noopener noreferrer">@slayer-br</a>
 - LinkedIn - <a href="https://www.linkedin.com/in/carlos-alberto-da-silva-93758b270/" target="_blank" rel="noopener noreferrer">@slayer-br</a>
